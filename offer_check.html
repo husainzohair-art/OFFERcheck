@@ -1,0 +1,830 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OfferCheck — Internship &amp; Job Offer Scam Checker for India</title>
+    <meta
+      name="description"
+      content="Check suspicious internships, job offers, and recruiters in India before paying registration fees or sharing sensitive personal information. Before you apply. Before you pay. Check it."
+    />
+    <meta property="og:title" content="OfferCheck — That internship offer looks exciting. But is it real?" />
+    <meta
+      property="og:description"
+      content="Evaluate recruitment warning signs, understand red flags, and get practical verification steps before accepting an internship, job, or freelance offer."
+    />
+    <meta property="og:type" content="website" />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23285FEA'/%3E%3Cpath d='M16 6l8 3.5v6c0 5-3.4 9.3-8 10.5-4.6-1.2-8-5.5-8-10.5v-6L16 6z' fill='none' stroke='white' stroke-width='2'/%3E%3Cpath d='M12.5 16l2.5 2.5 4.5-5' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: { sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'] },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="bg-[#F5F8FF] text-[#142B52] font-sans antialiased selection:bg-[#DCE7FF] selection:text-[#142B52]">
+    <!-- Sticky Navbar -->
+    <header class="sticky top-0 z-40 border-b border-[#DCE7FF] bg-white/90 backdrop-blur-md">
+      <div class="mx-auto flex max-w-6xl items-center justify-between px-4 py-3.5 sm:px-6">
+        <a href="#top" class="flex items-center gap-2.5 rounded-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#285FEA]">
+          <span class="flex h-9 w-9 items-center justify-center rounded-lg bg-[#285FEA] text-white shadow-sm">
+            <svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+            </svg>
+          </span>
+          <span class="text-xl font-bold tracking-tight text-[#142B52]">Offer<span class="text-[#285FEA]">Check</span></span>
+        </a>
+
+        <nav class="hidden items-center gap-7 md:flex" aria-label="Primary navigation">
+          <a href="#how-it-works" class="text-sm font-medium text-[#52627C] transition hover:text-[#142B52]">How It Works</a>
+          <a href="#warning-signs" class="text-sm font-medium text-[#52627C] transition hover:text-[#142B52]">Warning Signs</a>
+          <a href="#about" class="text-sm font-medium text-[#52627C] transition hover:text-[#142B52]">About</a>
+          <a href="#faq" class="text-sm font-medium text-[#52627C] transition hover:text-[#142B52]">FAQ</a>
+          <a href="#offer-checker" class="rounded-lg bg-[#285FEA] px-4 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:bg-[#1E4FD1]">Check an Offer</a>
+        </nav>
+
+        <button
+          id="mobileMenuBtn"
+          type="button"
+          aria-expanded="false"
+          aria-controls="mobileMenu"
+          aria-label="Open navigation menu"
+          class="rounded-lg p-2 text-[#142B52] hover:bg-[#F5F8FF] md:hidden"
+        >
+          <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+
+      <nav id="mobileMenu" class="hidden border-t border-[#DCE7FF] bg-white px-4 py-4 md:hidden" aria-label="Mobile navigation">
+        <div class="flex flex-col gap-3">
+          <a href="#how-it-works" class="mobile-link rounded-md px-2 py-2 text-sm font-medium text-[#52627C] hover:bg-[#F5F8FF]">How It Works</a>
+          <a href="#warning-signs" class="mobile-link rounded-md px-2 py-2 text-sm font-medium text-[#52627C] hover:bg-[#F5F8FF]">Warning Signs</a>
+          <a href="#about" class="mobile-link rounded-md px-2 py-2 text-sm font-medium text-[#52627C] hover:bg-[#F5F8FF]">About</a>
+          <a href="#faq" class="mobile-link rounded-md px-2 py-2 text-sm font-medium text-[#52627C] hover:bg-[#F5F8FF]">FAQ</a>
+          <a href="#offer-checker" class="mobile-link mt-1 rounded-lg bg-[#285FEA] px-4 py-2.5 text-center text-sm font-semibold text-white">Check an Offer</a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Hero Section -->
+      <section id="top" class="bg-gradient-to-b from-[#DCE7FF]/70 via-[#F5F8FF] to-[#F5F8FF] py-14 sm:py-20">
+        <div class="mx-auto grid max-w-6xl items-center gap-12 px-4 sm:px-6 lg:grid-cols-12">
+          <div class="lg:col-span-7">
+            <span class="inline-flex items-center gap-2 rounded-full border border-[#DCE7FF] bg-white px-3.5 py-1.5 text-xs font-semibold text-[#285FEA] shadow-sm">
+              Before you apply. Before you pay. Check it.
+            </span>
+
+            <h1 class="mt-5 text-3xl font-extrabold tracking-tight text-[#142B52] sm:text-5xl sm:leading-[1.12]">
+              That internship offer looks exciting. <span class="text-[#285FEA]">But is it real?</span>
+            </h1>
+
+            <p class="mt-5 max-w-2xl text-base leading-relaxed text-[#52627C] sm:text-lg">
+              Check suspicious internships, job offers and recruiters before risking your money or personal information.
+            </p>
+
+            <div class="mt-8 flex flex-wrap items-center gap-4">
+              <a href="#offer-checker" class="inline-flex items-center gap-2 rounded-xl bg-[#285FEA] px-6 py-3.5 text-base font-semibold text-white shadow-md shadow-[#285FEA]/20 transition hover:bg-[#1E4FD1]">
+                Check an Offer &rarr;
+              </a>
+              <a href="#how-it-works" class="inline-flex items-center rounded-xl border border-[#DCE7FF] bg-white px-6 py-3.5 text-base font-semibold text-[#142B52] shadow-sm transition hover:bg-[#F5F8FF]">
+                Learn How It Works
+              </a>
+            </div>
+
+            <div class="mt-8 flex flex-wrap gap-x-6 gap-y-2 text-xs font-medium text-[#52627C] sm:text-sm">
+              <span class="inline-flex items-center gap-1.5"><span class="text-[#16A34A] font-bold">&#10003;</span> Free for Indian students</span>
+              <span class="inline-flex items-center gap-1.5"><span class="text-[#16A34A] font-bold">&#10003;</span> Transparent risk explanations</span>
+              <span class="inline-flex items-center gap-1.5"><span class="text-[#16A34A] font-bold">&#10003;</span> No Aadhaar, OTP, or bank data required</span>
+            </div>
+          </div>
+
+          <div class="lg:col-span-5" aria-hidden="true">
+            <div class="rounded-2xl border border-[#DCE7FF] bg-white p-6 shadow-xl shadow-[#142B52]/5">
+              <div class="flex items-center justify-between border-b border-[#F5F8FF] pb-4">
+                <div>
+                  <p class="text-xs font-semibold uppercase tracking-wider text-[#52627C]">Sample Risk Preview</p>
+                  <p class="mt-0.5 text-sm font-bold text-[#142B52]">Remote Web Internship Offer</p>
+                </div>
+                <span class="rounded-full bg-[#DC2626]/10 px-3 py-1 text-xs font-bold text-[#DC2626]">High Risk &bull; 75/100</span>
+              </div>
+              <div class="mt-4 rounded-xl bg-[#F5F8FF] p-3.5 text-xs leading-relaxed text-[#52627C]">
+                “Congratulations! You have been selected for a work-from-home internship. Pay ₹499 as a refundable registration fee within 2 hours to confirm your position.”
+              </div>
+              <div class="mt-4 space-y-2.5 text-xs">
+                <div class="rounded-lg border border-[#DC2626]/20 bg-[#DC2626]/5 p-2.5">
+                  <p class="font-semibold text-[#142B52]">Upfront Registration Fee &amp; Refundable Language</p>
+                  <p class="text-[#52627C]">Genuine employers do not charge fees to join.</p>
+                </div>
+                <div class="rounded-lg border border-[#D97706]/20 bg-[#D97706]/5 p-2.5">
+                  <p class="font-semibold text-[#142B52]">Immediate Joining Pressure</p>
+                  <p class="text-[#52627C]">2-hour countdown pressures quick payment.</p>
+                </div>
+              </div>
+              <p class="mt-4 text-[11px] text-[#52627C]">Illustrative preview — submit your own offer below.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Offer Checker Section -->
+      <section id="offer-checker" class="py-16 sm:py-20">
+        <div class="mx-auto max-w-5xl px-4 sm:px-6">
+          <div class="text-center">
+            <span class="text-xs font-bold uppercase tracking-wider text-[#285FEA]">Offer Checker</span>
+            <h2 class="mt-2 text-2xl font-bold text-[#142B52] sm:text-3xl">Evaluate an internship, job, or freelance offer</h2>
+            <p class="mx-auto mt-3 max-w-2xl text-sm text-[#52627C] sm:text-base">
+              Paste the offer text and recruiter details below. Please never include Aadhaar numbers, OTPs, bank passwords, or UPI PINs.
+            </p>
+          </div>
+
+          <div class="mt-10 rounded-2xl border border-[#DCE7FF] bg-white p-6 shadow-lg shadow-[#142B52]/5 sm:p-8">
+            <div class="mb-5 flex flex-wrap items-center justify-between gap-2 border-b border-[#F5F8FF] pb-4">
+              <span class="text-xs font-medium text-[#52627C]">Quick test presets:</span>
+              <div class="flex flex-wrap gap-2">
+                <button type="button" id="loadScamBtn" class="rounded-lg border border-[#DC2626]/30 bg-[#DC2626]/5 px-3 py-1.5 text-xs font-semibold text-[#DC2626] hover:bg-[#DC2626]/10">Load High-Risk Example</button>
+                <button type="button" id="loadSafeBtn" class="rounded-lg border border-[#16A34A]/30 bg-[#16A34A]/5 px-3 py-1.5 text-xs font-semibold text-[#16A34A] hover:bg-[#16A34A]/10">Load Low-Risk Example</button>
+                <button type="button" id="clearCheckerBtn" class="rounded-lg border border-[#DCE7FF] px-3 py-1.5 text-xs font-semibold text-[#52627C] hover:bg-[#F5F8FF]">Clear</button>
+              </div>
+            </div>
+
+            <form id="checkerForm" class="space-y-5" novalidate>
+              <div class="grid gap-5 sm:grid-cols-2">
+                <div>
+                  <label for="companyName" class="block text-sm font-semibold text-[#142B52]">Company Name <span class="text-[#DC2626]">*</span></label>
+                  <input id="companyName" type="text" maxlength="120" required placeholder="e.g., Acme Technologies Pvt Ltd" class="mt-1.5 w-full rounded-xl border border-[#DCE7FF] bg-[#F5F8FF]/50 px-3.5 py-2.5 text-sm focus:border-[#285FEA] focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#285FEA]/20" />
+                </div>
+                <div>
+                  <label for="opportunityType" class="block text-sm font-semibold text-[#142B52]">Opportunity Type <span class="text-[#DC2626]">*</span></label>
+                  <select id="opportunityType" class="mt-1.5 w-full rounded-xl border border-[#DCE7FF] bg-[#F5F8FF]/50 px-3.5 py-2.5 text-sm focus:border-[#285FEA] focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#285FEA]/20">
+                    <option>Internship</option>
+                    <option>Full-time employment</option>
+                    <option>Part-time employment</option>
+                    <option>Freelance project</option>
+                    <option>Remote opportunity</option>
+                    <option>Other</option>
+                  </select>
+                </div>
+              </div>
+
+              <div>
+                <label for="description" class="block text-sm font-semibold text-[#142B52]">Opportunity Description / Offer Message <span class="text-[#DC2626]">*</span></label>
+                <textarea id="description" rows="5" maxlength="4000" required placeholder="Paste the offer message, WhatsApp/Telegram text, email body, stipend terms, or joining instructions..." class="mt-1.5 w-full rounded-xl border border-[#DCE7FF] bg-[#F5F8FF]/50 px-3.5 py-2.5 text-sm focus:border-[#285FEA] focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#285FEA]/20"></textarea>
+              </div>
+
+              <div class="grid gap-5 sm:grid-cols-2">
+                <div>
+                  <label for="recruiterEmail" class="block text-sm font-semibold text-[#142B52]">Recruiter Email <span class="font-normal text-[#52627C]">(optional)</span></label>
+                  <input id="recruiterEmail" type="email" maxlength="160" placeholder="e.g., hr@company.com" class="mt-1.5 w-full rounded-xl border border-[#DCE7FF] bg-[#F5F8FF]/50 px-3.5 py-2.5 text-sm focus:border-[#285FEA] focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#285FEA]/20" />
+                </div>
+                <div>
+                  <label for="companyWebsite" class="block text-sm font-semibold text-[#142B52]">Company Website <span class="font-normal text-[#52627C]">(optional)</span></label>
+                  <input id="companyWebsite" type="url" maxlength="255" placeholder="https://company.com" class="mt-1.5 w-full rounded-xl border border-[#DCE7FF] bg-[#F5F8FF]/50 px-3.5 py-2.5 text-sm focus:border-[#285FEA] focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#285FEA]/20" />
+                </div>
+                <div>
+                  <label for="recruiterContact" class="block text-sm font-semibold text-[#142B52]">Recruiter Contact / Handle <span class="font-normal text-[#52627C]">(optional)</span></label>
+                  <input id="recruiterContact" type="text" maxlength="80" placeholder="Phone, Telegram handle, or LinkedIn URL" class="mt-1.5 w-full rounded-xl border border-[#DCE7FF] bg-[#F5F8FF]/50 px-3.5 py-2.5 text-sm focus:border-[#285FEA] focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#285FEA]/20" />
+                </div>
+                <div>
+                  <label for="opportunitySource" class="block text-sm font-semibold text-[#142B52]">Opportunity Source <span class="font-normal text-[#52627C]">(optional)</span></label>
+                  <select id="opportunitySource" class="mt-1.5 w-full rounded-xl border border-[#DCE7FF] bg-[#F5F8FF]/50 px-3.5 py-2.5 text-sm focus:border-[#285FEA] focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#285FEA]/20">
+                    <option value="">Select where you found this offer</option>
+                    <option>LinkedIn</option>
+                    <option>WhatsApp</option>
+                    <option>Telegram</option>
+                    <option>Instagram</option>
+                    <option>College placement cell</option>
+                    <option>Company website</option>
+                    <option>Other</option>
+                  </select>
+                </div>
+              </div>
+
+              <p id="checkerError" role="alert" class="hidden rounded-xl border border-[#DC2626]/30 bg-[#DC2626]/10 px-4 py-3 text-sm text-[#DC2626]"></p>
+
+              <div class="flex flex-col items-start justify-between gap-4 border-t border-[#F5F8FF] pt-4 sm:flex-row sm:items-center">
+                <p class="text-xs text-[#52627C]">Rule-based transparency engine. Missing optional fields never count against an offer.</p>
+                <button type="submit" class="w-full rounded-xl bg-[#285FEA] px-6 py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-[#1E4FD1] sm:w-auto">
+                  Analyse Offer Risk
+                </button>
+              </div>
+            </form>
+
+            <!-- Dynamic Result Interface -->
+            <div id="resultBox" aria-live="polite" class="mt-8 hidden space-y-6 rounded-2xl border border-[#DCE7FF] bg-[#F5F8FF]/70 p-6"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- How It Works & About -->
+      <section id="how-it-works" class="bg-white py-16 sm:py-20">
+        <div class="mx-auto max-w-6xl px-4 sm:px-6">
+          <div class="text-center">
+            <span class="text-xs font-bold uppercase tracking-wider text-[#285FEA]">How It Works</span>
+            <h2 class="mt-2 text-2xl font-bold text-[#142B52] sm:text-3xl">Three steps before you accept or pay</h2>
+          </div>
+
+          <div class="mt-10 grid gap-6 md:grid-cols-3">
+            <div class="rounded-2xl border border-[#DCE7FF] bg-[#F5F8FF]/50 p-6">
+              <span class="text-2xl font-extrabold text-[#285FEA]">01</span>
+              <h3 class="mt-3 text-lg font-bold text-[#142B52]">Submit</h3>
+              <p class="mt-1.5 text-sm text-[#52627C]">Paste your opportunity details.</p>
+            </div>
+            <div class="rounded-2xl border border-[#DCE7FF] bg-[#F5F8FF]/50 p-6">
+              <span class="text-2xl font-extrabold text-[#285FEA]">02</span>
+              <h3 class="mt-3 text-lg font-bold text-[#142B52]">Analyse</h3>
+              <p class="mt-1.5 text-sm text-[#52627C]">OfferCheck evaluates potential warning signs.</p>
+            </div>
+            <div class="rounded-2xl border border-[#DCE7FF] bg-[#F5F8FF]/50 p-6">
+              <span class="text-2xl font-extrabold text-[#285FEA]">03</span>
+              <h3 class="mt-3 text-lg font-bold text-[#142B52]">Verify</h3>
+              <p class="mt-1.5 text-sm text-[#52627C]">Review the findings and follow recommended verification steps.</p>
+            </div>
+          </div>
+
+          <div id="about" class="mt-12 rounded-2xl bg-gradient-to-r from-[#142B52] to-[#1F3F75] p-8 text-white sm:p-10">
+            <span class="text-xs font-bold uppercase tracking-wider text-[#DCE7FF]">About OfferCheck</span>
+            <h3 class="mt-2 text-xl font-bold sm:text-2xl">
+              “Don’t tell students what to trust. Give them the information to make a better decision.”
+            </h3>
+            <p class="mt-3 max-w-3xl text-sm leading-relaxed text-[#DCE7FF]">
+              Students across India discover internships and entry-level roles on WhatsApp, Telegram, Instagram, and job portals. OfferCheck acts as your first checkpoint—explaining potential red flags clearly without making unsupported claims.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Warning Signs -->
+      <section id="warning-signs" class="py-16 sm:py-20">
+        <div class="mx-auto max-w-6xl px-4 sm:px-6">
+          <div class="text-center">
+            <span class="text-xs font-bold uppercase tracking-wider text-[#285FEA]">Safety Guide</span>
+            <h2 class="mt-2 text-2xl font-bold text-[#142B52] sm:text-3xl">8 Common Recruitment Warning Signs</h2>
+            <p class="mx-auto mt-3 max-w-2xl text-sm text-[#52627C] sm:text-base">
+              Learn what red flags look like in real messages, why scammers use them, and how to respond safely.
+            </p>
+          </div>
+          <div id="warningSignsGrid" class="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4"></div>
+        </div>
+      </section>
+
+      <!-- Sample Analysis -->
+      <section id="sample-analysis" class="bg-white py-16 sm:py-20">
+        <div class="mx-auto max-w-4xl px-4 sm:px-6">
+          <div class="text-center">
+            <span class="inline-flex rounded-full bg-[#DCE7FF] px-3 py-1 text-xs font-bold text-[#142B52]">Sample Data — Illustrative Demonstration Only</span>
+            <h2 class="mt-3 text-2xl font-bold text-[#142B52] sm:text-3xl">See how OfferCheck explains risk</h2>
+          </div>
+
+          <div class="mt-8 rounded-2xl border border-[#DCE7FF] bg-[#F5F8FF] p-6 sm:p-8">
+            <p class="text-xs font-semibold uppercase tracking-wider text-[#52627C]">Sample Offer Submitted</p>
+            <blockquote class="mt-2 rounded-xl border border-[#DCE7FF] bg-white p-4 text-sm font-medium text-[#142B52]">
+              “Congratulations! You have been selected for a work-from-home internship. Pay ₹499 as a refundable registration fee to confirm your position.”
+            </blockquote>
+
+            <div class="mt-6 flex flex-wrap items-center justify-between gap-3">
+              <span class="inline-flex items-center gap-2 rounded-full bg-[#DC2626]/10 px-4 py-1.5 text-sm font-bold text-[#DC2626]">
+                High Risk – Warning signs detected
+              </span>
+              <span class="text-xs font-medium text-[#52627C]">This example uses fictional sample text</span>
+            </div>
+
+            <ul class="mt-4 space-y-2 text-sm text-[#142B52]">
+              <li class="flex items-center gap-2"><span class="h-2 w-2 rounded-full bg-[#DC2626]"></span> Upfront payment requested (₹499).</li>
+              <li class="flex items-center gap-2"><span class="h-2 w-2 rounded-full bg-[#DC2626]"></span> Refundable fee language detected.</li>
+              <li class="flex items-center gap-2"><span class="h-2 w-2 rounded-full bg-[#D97706]"></span> Company identity not independently verified.</li>
+            </ul>
+
+            <div class="mt-5 rounded-xl bg-white p-4 text-xs leading-relaxed text-[#52627C]">
+              <strong class="text-[#142B52]">Recommended actions:</strong> Do not transfer ₹499. Legitimate internships never require a refundable registration fee to confirm selection. Verify the employer independently via their official careers website and consult your college placement cell.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Community Reporting -->
+      <section id="report" class="py-16 sm:py-20">
+        <div class="mx-auto max-w-4xl px-4 sm:px-6">
+          <div class="rounded-2xl border border-[#DCE7FF] bg-white p-6 shadow-sm sm:p-8">
+            <h2 class="text-xl font-bold text-[#142B52] sm:text-2xl">Report a Suspicious Recruitment Experience</h2>
+            <p class="mt-1 text-xs text-[#52627C] sm:text-sm">Help protect other students. All reports enter a moderation queue before any public use.</p>
+
+            <form id="reportForm" class="mt-6 space-y-4">
+              <input id="repTrap" type="text" tabindex="-1" autocomplete="off" class="hidden" />
+              <div class="grid gap-4 sm:grid-cols-3">
+                <input id="repCompany" type="text" required minlength="2" maxlength="120" placeholder="Company / Sender Name *" class="rounded-xl border border-[#DCE7FF] px-3 py-2 text-sm focus:border-[#285FEA] focus:outline-none" />
+                <select id="repType" class="rounded-xl border border-[#DCE7FF] px-3 py-2 text-sm focus:border-[#285FEA] focus:outline-none">
+                  <option>Internship</option>
+                  <option>Full-time employment</option>
+                  <option>Part-time employment</option>
+                  <option>Freelance project</option>
+                  <option>Other</option>
+                </select>
+                <select id="repPlatform" class="rounded-xl border border-[#DCE7FF] px-3 py-2 text-sm focus:border-[#285FEA] focus:outline-none">
+                  <option>WhatsApp</option>
+                  <option>Telegram</option>
+                  <option>LinkedIn</option>
+                  <option>Instagram</option>
+                  <option>College placement cell</option>
+                  <option>Other</option>
+                </select>
+              </div>
+              <textarea id="repDesc" rows="3" required minlength="25" maxlength="3000" placeholder="Describe what happened (at least 25 characters). Do not include your own sensitive personal documents. *" class="w-full rounded-xl border border-[#DCE7FF] px-3 py-2 text-sm focus:border-[#285FEA] focus:outline-none"></textarea>
+              <div class="grid gap-4 sm:grid-cols-2">
+                <input id="repEvidence" type="text" maxlength="500" placeholder="Supporting evidence note or post URL (optional)" class="rounded-xl border border-[#DCE7FF] px-3 py-2 text-sm focus:border-[#285FEA] focus:outline-none" />
+                <input id="repEmail" type="email" maxlength="160" placeholder="Your contact email (optional — follow-up only)" class="rounded-xl border border-[#DCE7FF] px-3 py-2 text-sm focus:border-[#285FEA] focus:outline-none" />
+              </div>
+              <label class="flex items-start gap-2 text-xs text-[#52627C]">
+                <input id="repConsent" type="checkbox" required class="mt-0.5 rounded" />
+                <span>I understand this report is reviewed by moderators, does not constitute verified legal proof, and is not used automatically for marketing. *</span>
+              </label>
+              <button type="submit" class="rounded-xl bg-[#142B52] px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-[#1E3D73]">Submit Report for Review</button>
+              <p id="reportFeedback" class="hidden rounded-xl border border-[#16A34A]/30 bg-[#16A34A]/10 px-4 py-3 text-xs font-medium text-[#16A34A]"></p>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <!-- Waitlist Section -->
+      <section id="waitlist" class="bg-[#DCE7FF]/60 py-16 sm:py-20">
+        <div class="mx-auto max-w-4xl px-4 sm:px-6">
+          <div class="rounded-2xl border border-[#DCE7FF] bg-white p-6 shadow-md sm:p-10">
+            <div class="text-center">
+              <span class="rounded-full bg-[#F5F8FF] px-3 py-1 text-xs font-bold text-[#285FEA]">Early Access Community</span>
+              <h2 class="mt-3 text-2xl font-bold text-[#142B52] sm:text-3xl">Join the OfferCheck Community</h2>
+              <p class="mx-auto mt-2 max-w-xl text-sm text-[#52627C]">
+                Get notified as we launch AI-assisted clause detection, domain reputation signals, and student safety toolkits across India.
+              </p>
+            </div>
+
+            <form id="waitlistForm" class="mt-7 space-y-4">
+              <input id="wlTrap" type="text" tabindex="-1" autocomplete="off" class="hidden" />
+              <div class="grid gap-4 sm:grid-cols-2">
+                <input id="wlName" type="text" required minlength="2" maxlength="100" placeholder="Full Name *" class="rounded-xl border border-[#DCE7FF] px-3.5 py-2.5 text-sm focus:border-[#285FEA] focus:outline-none" />
+                <input id="wlEmail" type="email" required maxlength="160" placeholder="Email Address *" class="rounded-xl border border-[#DCE7FF] px-3.5 py-2.5 text-sm focus:border-[#285FEA] focus:outline-none" />
+                <input id="wlCollege" type="text" maxlength="150" placeholder="College / University (optional)" class="rounded-xl border border-[#DCE7FF] px-3.5 py-2.5 text-sm focus:border-[#285FEA] focus:outline-none" />
+                <select id="wlYear" class="rounded-xl border border-[#DCE7FF] px-3.5 py-2.5 text-sm focus:border-[#285FEA] focus:outline-none">
+                  <option value="">Academic Year (optional)</option>
+                  <option>First Year</option>
+                  <option>Second Year</option>
+                  <option>Third Year</option>
+                  <option>Final Year</option>
+                  <option>Fresh Graduate</option>
+                  <option>Early-Career Professional</option>
+                </select>
+              </div>
+              <label class="flex items-start gap-2 text-xs text-[#52627C]">
+                <input id="wlConsent" type="checkbox" required class="mt-0.5 rounded" />
+                <span>I consent to OfferCheck storing my email to share waitlist and product updates. You can unsubscribe or request deletion anytime. *</span>
+              </label>
+              <div class="pt-1 text-center">
+                <button type="submit" class="w-full rounded-xl bg-[#285FEA] px-6 py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-[#1E4FD1] sm:w-auto">
+                  Join the OfferCheck Community
+                </button>
+              </div>
+              <p id="waitlistFeedback" class="hidden rounded-xl border border-[#16A34A]/30 bg-[#16A34A]/10 px-4 py-3 text-center text-xs font-medium text-[#16A34A]"></p>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ Section -->
+      <section id="faq" class="bg-white py-16 sm:py-20">
+        <div class="mx-auto max-w-3xl px-4 sm:px-6">
+          <div class="text-center">
+            <span class="text-xs font-bold uppercase tracking-wider text-[#285FEA]">FAQ</span>
+            <h2 class="mt-2 text-2xl font-bold text-[#142B52] sm:text-3xl">Frequently Asked Questions</h2>
+          </div>
+          <div id="faqList" class="mt-8 space-y-3"></div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-[#DCE7FF] bg-[#142B52] text-white">
+      <div class="mx-auto max-w-6xl px-4 py-12 sm:px-6">
+        <div class="grid gap-8 md:grid-cols-3">
+          <div>
+            <p class="text-lg font-bold">OfferCheck</p>
+            <p class="mt-3 text-sm leading-relaxed text-[#DCE7FF]">
+              A student-focused recruitment safety platform helping Indians evaluate internships, job offers, and freelance opportunities before paying or sharing personal data.
+            </p>
+            <p class="mt-3 text-xs font-medium text-[#F59E0B]">Before you apply. Before you pay. Check it.</p>
+          </div>
+
+          <div>
+            <h3 class="text-sm font-bold uppercase tracking-wider text-[#DCE7FF]">Navigation</h3>
+            <ul class="mt-3 space-y-2 text-sm text-[#DCE7FF]">
+              <li><a href="#offer-checker" class="hover:text-white">Offer Checker</a></li>
+              <li><a href="#how-it-works" class="hover:text-white">How It Works</a></li>
+              <li><a href="#warning-signs" class="hover:text-white">Warning Signs</a></li>
+              <li><a href="#report" class="hover:text-white">Community Reporting</a></li>
+              <li><a href="#faq" class="hover:text-white">FAQ</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="text-sm font-bold uppercase tracking-wider text-[#DCE7FF]">Contact &amp; Legal</h3>
+            <p class="mt-3 text-sm text-[#DCE7FF]">
+              Contact: <a href="mailto:hello@offercheck.in" class="underline hover:text-white">hello@offercheck.in</a>
+            </p>
+            <div class="mt-4 flex flex-wrap gap-4 text-xs text-[#DCE7FF]">
+              <button type="button" data-legal="privacy" class="underline hover:text-white">Privacy Policy</button>
+              <button type="button" data-legal="terms" class="underline hover:text-white">Terms &amp; Conditions</button>
+              <button type="button" data-legal="disclaimer" class="underline hover:text-white">Disclaimer</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-10 border-t border-white/15 pt-6 text-center text-xs text-[#DCE7FF]">
+          &copy; 2026 OfferCheck. Informational recruitment safety platform—not a guarantee of employer authenticity.
+        </div>
+      </div>
+    </footer>
+
+    <!-- Legal Modal -->
+    <div id="legalModal" role="dialog" aria-modal="true" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/50 p-4">
+      <div class="max-w-lg rounded-2xl bg-white p-6 text-[#142B52] shadow-xl">
+        <div class="flex items-center justify-between border-b border-[#DCE7FF] pb-3">
+          <h4 id="legalTitle" class="text-lg font-bold"></h4>
+          <button id="closeLegalBtn" type="button" aria-label="Close modal" class="rounded-lg px-2 py-1 text-sm font-bold hover:bg-[#F5F8FF]">&times;</button>
+        </div>
+        <p id="legalBody" class="mt-4 text-sm leading-relaxed text-[#52627C]"></p>
+      </div>
+    </div>
+
+    <script>
+      const escapeHtml = (str) =>
+        String(str).replace(/[&<>"']/g, (m) => ({
+          '&': '&amp;',
+          '<': '&lt;',
+          '>': '&gt;',
+          '"': '&quot;',
+          "'": '&#39;',
+        }[m]));
+
+      // Mobile Navigation
+      const mobileBtn = document.getElementById('mobileMenuBtn');
+      const mobileMenu = document.getElementById('mobileMenu');
+      mobileBtn.addEventListener('click', () => {
+        const isHidden = mobileMenu.classList.toggle('hidden');
+        mobileBtn.setAttribute('aria-expanded', String(!isHidden));
+      });
+      document.querySelectorAll('.mobile-link').forEach((el) =>
+        el.addEventListener('click', () => {
+          mobileMenu.classList.add('hidden');
+          mobileBtn.setAttribute('aria-expanded', 'false');
+        })
+      );
+
+      // 8 Warning Signs Cards (PRD Section 8.5)
+      const WARNING_SIGNS = [
+        ['Upfront Registration Fees', 'Demanding money to process applications, ID cards, or onboarding.', '"Pay ₹499 registration fee to unlock your internship offer letter."', 'Genuine employers pay interns and employees—they do not charge candidates.', 'Do not pay. Stop communication immediately.'],
+        ['Refundable Security Deposits', 'Promising to return a deposit after training or laptop delivery.', '"Transfer ₹1,500 refundable laptop security deposit before onboarding."', 'The "refundable" label builds false confidence; deposits are rarely returned.', 'Never transfer deposits via UPI, QR codes, or personal bank accounts.'],
+        ['Unrealistic Salary Promises', 'Offering unusually high pay for minimal skills or zero interview.', '"Earn ₹45,000/month for 1 hour/day copy-paste work—no experience needed."', 'Exaggerated stipends rush students past standard verification checks.', 'Compare the pay against typical Indian market stipends for that role.'],
+        ['Unofficial Email Addresses', 'Recruiters impersonating known firms using free webmail accounts.', '"hr.infosys.careers2026@gmail.com" instead of an official corporate domain.', 'Free email accounts can be created anonymously by anyone.', 'Verify the sender domain against the company’s official careers page.'],
+        ['Immediate Joining Pressure', 'Artificial countdowns forcing you to accept or pay within hours.', '"Seat expires in 2 hours—confirm payment now or your offer is cancelled."', 'Urgency stops you from consulting parents, seniors, or your placement cell.', 'Take time to verify. Legitimate hiring teams respect verification time.'],
+        ['Requests for Sensitive Information', 'Asking for OTPs, banking PINs, or full KYC scans before an interview.', '"Share Aadhaar, PAN, and bank OTP now for payroll verification."', 'Early document harvesting enables identity theft and financial fraud.', 'Never share OTPs, UPI PINs, bank passwords, or unverified KYC scans.'],
+        ['Fake Company Websites', 'Misspelled URLs or newly created domains copying real brands.', '"tcs-careers-india-portal.xyz" with no real LinkedIn presence.', 'Clone sites make fraudulent offer portals look authentic.', 'Search the company independently and check official LinkedIn profiles.'],
+        ['Unclear Job Responsibilities', 'Vague descriptions with no interview or technical evaluation.', '"Selected directly from Telegram group! Simple daily tasks, guaranteed certificate."', 'Legitimate internships specify deliverables, mentorship, and real selection.', 'Ask for a structured role description and verify the interviewer.']
+      ];
+      document.getElementById('warningSignsGrid').innerHTML = WARNING_SIGNS.map(([t, d, ex, why, act]) => `
+        <article class="flex flex-col rounded-2xl border border-[#DCE7FF] bg-white p-5 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md">
+          <h3 class="text-base font-bold text-[#142B52]">${t}</h3>
+          <p class="mt-1.5 text-xs leading-relaxed text-[#52627C]">${d}</p>
+          <div class="mt-4 rounded-lg bg-[#F5F8FF] p-3 text-xs italic text-[#142B52]">${ex}</div>
+          <div class="mt-4 space-y-2 border-t border-[#F5F8FF] pt-3 text-xs">
+            <p class="text-[#52627C]"><strong class="text-[#142B52]">Why it matters:</strong> ${why}</p>
+            <p class="text-[#52627C]"><strong class="text-[#285FEA]">Action:</strong> ${act}</p>
+          </div>
+        </article>
+      `).join('');
+
+      // 8 FAQs Accordion (PRD Section 8.9)
+      const FAQS = [
+        ['What is OfferCheck?', 'OfferCheck is a student-focused recruitment safety platform built to help college students, fresh graduates, and early-career professionals spot warning signs in internship, job, and freelance offers before risking money or personal data.'],
+        ['Is OfferCheck free?', 'Yes. Checking offers, viewing risk explanations, reading safety guides, and reporting suspicious experiences are completely free for students.'],
+        ['Can OfferCheck guarantee that an internship is genuine?', 'No. OfferCheck is an informational risk-assessment tool—not a guarantee of employer authenticity. A Low Risk score means fewer textual warning signs were detected, not that an employer has been independently certified.'],
+        ['What happens to submitted information?', 'Offer details are analysed solely to generate your risk assessment and recommendations. You do not need to share Aadhaar numbers, bank passwords, OTPs, or UPI PINs—and we ask that you never submit them.'],
+        ['Should I pay internship registration fees?', 'No. Legitimate companies do not charge registration fees, training charges, or refundable security deposits to issue an internship or job offer.'],
+        ['What should I do if I have already been scammed?', 'Stop sending money or documents immediately, preserve screenshots and transaction IDs, contact your bank to block affected payment methods, and report the incident on India’s National Cyber Crime Reporting Portal (cybercrime.gov.in or helpline 1930).'],
+        ['Can I report a suspicious recruiter?', 'Yes. Use the Community Reporting form above to flag suspicious recruitment experiences. All reports go into a moderation queue and are reviewed before any public reference.'],
+        ['Does OfferCheck independently verify companies?', 'In this initial release, OfferCheck evaluates text patterns and recruiter details you provide using a transparent rule-based engine and guides you on how to verify companies independently.']
+      ];
+      const faqList = document.getElementById('faqList');
+      faqList.innerHTML = FAQS.map(([q, a], i) => `
+        <div class="overflow-hidden rounded-xl border border-[#DCE7FF] bg-[#F5F8FF]/40">
+          <button type="button" data-faq="${i}" aria-expanded="${i === 0}" class="flex w-full items-center justify-between gap-4 px-5 py-4 text-left text-sm font-semibold text-[#142B52] hover:bg-[#F5F8FF] sm:text-base">
+            <span>${q}</span>
+            <span class="font-bold text-[#285FEA]">${i === 0 ? '−' : '+'}</span>
+          </button>
+          <div id="faq-ans-${i}" class="${i === 0 ? '' : 'hidden'} border-t border-[#DCE7FF] bg-white px-5 py-4 text-sm leading-relaxed text-[#52627C]">${a}</div>
+        </div>
+      `).join('');
+      faqList.addEventListener('click', (e) => {
+        const btn = e.target.closest('[data-faq]');
+        if (!btn) return;
+        const ans = document.getElementById('faq-ans-' + btn.dataset.faq);
+        const nowHidden = ans.classList.toggle('hidden');
+        btn.setAttribute('aria-expanded', String(!nowHidden));
+        btn.lastElementChild.textContent = nowHidden ? '+' : '−';
+      });
+
+      // Presets
+      document.getElementById('loadScamBtn').addEventListener('click', () => {
+        document.getElementById('companyName').value = 'Apex Digital Solutions';
+        document.getElementById('opportunityType').value = 'Internship';
+        document.getElementById('description').value = 'Congratulations! You have been selected for a work-from-home internship. Pay ₹499 as a refundable registration fee within 2 hours to confirm your position.';
+        document.getElementById('recruiterEmail').value = 'hr.apexdigital2026@gmail.com';
+        document.getElementById('companyWebsite').value = '';
+        document.getElementById('opportunitySource').value = 'WhatsApp';
+        document.getElementById('resultBox').classList.add('hidden');
+      });
+      document.getElementById('loadSafeBtn').addEventListener('click', () => {
+        document.getElementById('companyName').value = 'Zoho Corporation';
+        document.getElementById('opportunityType').value = 'Internship';
+        document.getElementById('description').value = 'We are inviting applications for a 6-month Software Engineering Internship in Chennai. Stipend ₹25,000/month. Shortlisted candidates will attend two technical interviews and an HR discussion. Note: We never charge any registration fee.';
+        document.getElementById('recruiterEmail').value = 'campus@zohocorp.com';
+        document.getElementById('companyWebsite').value = 'https://www.zohocorp.com';
+        document.getElementById('opportunitySource').value = 'College placement cell';
+        document.getElementById('resultBox').classList.add('hidden');
+      });
+      document.getElementById('clearCheckerBtn').addEventListener('click', () => {
+        document.getElementById('checkerForm').reset();
+        document.getElementById('checkerError').classList.add('hidden');
+        document.getElementById('resultBox').classList.add('hidden');
+      });
+
+      // Risk Engine Helpers
+      const FREE_EMAILS = new Set(['gmail.com', 'yahoo.com', 'yahoo.co.in', 'outlook.com', 'hotmail.com', 'proton.me', 'protonmail.com', 'rediffmail.com']);
+      const hasNegation = (text, idx) =>
+        /\b(no|never|not|zero|without|do not|don't|free of)\s+(?:charge|ask|collect|require|pay|need)?\s*$/.test(
+          text.slice(Math.max(0, idx - 45), idx).toLowerCase()
+        );
+      function extractDomain(val) {
+        if (!val) return null;
+        const t = val.trim().toLowerCase();
+        if (!t) return null;
+        if (t.includes('@')) return t.split('@')[1] || null;
+        try {
+          return new URL(t.startsWith('http') ? t : 'https://' + t).hostname.replace(/^www\./, '');
+        } catch {
+          return null;
+        }
+      }
+
+      document.getElementById('checkerForm').addEventListener('submit', (e) => {
+        e.preventDefault();
+        const company = document.getElementById('companyName').value.trim();
+        const type = document.getElementById('opportunityType').value;
+        const desc = document.getElementById('description').value.replace(/\s+/g, ' ').trim();
+        const email = document.getElementById('recruiterEmail').value.trim();
+        const website = document.getElementById('companyWebsite').value.trim();
+        const source = document.getElementById('opportunitySource').value;
+        const errEl = document.getElementById('checkerError');
+
+        if (company.length < 2) {
+          errEl.textContent = 'Company name must be at least 2 characters.';
+          errEl.classList.remove('hidden');
+          return;
+        }
+        if (desc.length < 20) {
+          errEl.textContent = 'Please provide at least 20 characters describing the offer or message.';
+          errEl.classList.remove('hidden');
+          return;
+        }
+        if (email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+          errEl.textContent = 'Please enter a valid recruiter email address.';
+          errEl.classList.remove('hidden');
+          return;
+        }
+        errEl.classList.add('hidden');
+
+        const indicators = [];
+        let paymentFlag = false;
+
+        const mUpfront = desc.match(/\b(registration fee|processing fee|application fee|onboarding fee|training fee|pay\s*(?:rs\.?|inr|₹)?\s*\d+)\b/i);
+        if (mUpfront && !hasNegation(desc, mUpfront.index)) {
+          paymentFlag = true;
+          indicators.push(['Upfront payment or registration fee requested', 'High', 30, mUpfront[0], 'Legitimate employers do not require candidates to pay registration or onboarding fees.']);
+        }
+
+        const mRefund = desc.match(/\b(refundable\s+(?:fee|deposit|security|amount|registration)|security deposit|caution deposit)\b/i);
+        if (mRefund && !hasNegation(desc, mRefund.index)) {
+          paymentFlag = true;
+          indicators.push(['Refundable deposit language detected', 'High', mUpfront ? 20 : 30, mRefund[0], 'Promising a "refundable" fee or deposit is one of the most common internship scam tactics.']);
+        }
+
+        const mSens = desc.match(/\b(otp|upi pin|bank password|cvv|atm pin|netbanking|aadhaar\s*(?:card|number)?\s*(?:and|&)?\s*pan|bank login)\b/i);
+        if (mSens) {
+          indicators.push(['Request for sensitive personal or banking credentials', 'High', 20, mSens[0], 'OTPs, banking PINs, and early KYC scans should never be requested during initial hiring.']);
+        }
+
+        const mSalary = desc.match(/\b(earn\s*(?:rs\.?|inr|₹)?\s*(?:\d{4,6})\s*(?:daily|per day|weekly|per week)|no\s*(?:interview|experience)\s*(?:needed|required)|guaranteed\s*(?:placement|job|income)|1\s*hour\s*(?:daily|a day))\b/i);
+        if (mSalary) {
+          indicators.push(['Unrealistic pay or zero-interview guarantee claims', 'Medium', 15, mSalary[0], 'Promises of high daily payouts or zero interviews are frequent markers of misleading offers.']);
+        }
+
+        const mUrg = desc.match(/\b(pay\s*(?:now|immediately|today)|within\s*\d+\s*hours?|last\s*chance|offer\s*(?:will\s*)?expires?|limited\s*slots?|confirm\s*immediately)\b/i);
+        if (mUrg) {
+          indicators.push(['Artificial urgency or immediate acceptance pressure', 'Medium', 10, mUrg[0], 'High-pressure deadlines prevent candidates from verifying the offer with mentors.']);
+        }
+
+        const mComm = desc.match(/\b(telegram\s*(?:channel|group|id|hr)|whatsapp\s*(?:only|group|message)|dm\s*(?:for|to)\s*apply|part[- ]time\s*task\s*job)\b/i);
+        if (mComm || source === 'Telegram') {
+          indicators.push(['Informal or suspicious communication pattern', 'Low', 10, mComm ? mComm[0] : 'Source: Telegram', 'Unverified Telegram channels or task groups are commonly misused for impersonation.']);
+        }
+
+        const emailDom = extractDomain(email);
+        const siteDom = extractDomain(website);
+        if (emailDom && FREE_EMAILS.has(emailDom)) {
+          indicators.push(['Recruiter uses a free webmail address', 'Medium', 15, '@' + emailDom, 'Established organisations usually communicate from an official corporate domain.']);
+        } else if (emailDom && siteDom && emailDom !== siteDom && !emailDom.endsWith('.' + siteDom)) {
+          indicators.push(['Recruiter email domain does not match company website', 'Medium', 15, emailDom + ' vs ' + siteDom, 'A domain mismatch between email and website warrants direct verification.']);
+        }
+
+        let score = indicators.reduce((sum, x) => sum + x[2], 0);
+        if (paymentFlag && score < 50) score = 50;
+        score = Math.min(100, score);
+
+        const cat = score >= 50 ? 'High Risk' : score >= 25 ? 'Medium Risk' : 'Low Risk';
+        const color = score >= 50 ? '#DC2626' : score >= 25 ? '#D97706' : '#16A34A';
+        const summary =
+          cat === 'High Risk'
+            ? 'Strong recruitment warning signs were detected. Exercise extreme caution and do not send money or sensitive documents.'
+            : cat === 'Medium Risk'
+              ? 'Some caution signals were detected. Independently verify the recruiter and company details before proceeding.'
+              : 'Few textual warning signs were detected from the information provided. Standard independent verification is still strongly recommended.';
+
+        const recs = [];
+        if (paymentFlag) recs.push('Do not pay any registration fee, training fee, or refundable security deposit.');
+        if (mSens) recs.push('Never share OTPs, UPI PINs, bank passwords, or Aadhaar/PAN copies before formal verified onboarding.');
+        if (emailDom && FREE_EMAILS.has(emailDom)) recs.push('Look up ' + company + ' independently and verify this offer through their official careers website.');
+        recs.push('Cross-check the recruiter’s profile on LinkedIn and confirm their affiliation with the company.');
+        recs.push('Consult your college placement cell, faculty mentor, or seniors before accepting or signing anything.');
+
+        const box = document.getElementById('resultBox');
+        box.innerHTML = `
+          <div class="flex flex-wrap items-start justify-between gap-4">
+            <div>
+              <p class="text-xs font-semibold uppercase tracking-wider text-[#52627C]">Assessment for ${escapeHtml(company)} (${escapeHtml(type)})</p>
+              <h3 class="mt-1 text-xl font-bold text-[#142B52]">Risk Score: ${score} / 100</h3>
+            </div>
+            <span class="rounded-full px-4 py-1.5 text-sm font-bold text-white" style="background:${color}">${cat}</span>
+          </div>
+
+          <div class="h-2.5 w-full overflow-hidden rounded-full bg-white">
+            <div class="h-full rounded-full transition-all duration-500" style="width:${Math.max(score, 6)}%;background:${color}"></div>
+          </div>
+
+          <p class="text-sm leading-relaxed text-[#142B52]">${summary}</p>
+
+          <div>
+            <h4 class="text-sm font-bold text-[#142B52]">Detected Warning Indicators (${indicators.length})</h4>
+            <div class="mt-3 space-y-2.5">
+              ${
+                indicators.length
+                  ? indicators
+                      .map(
+                        ([t, sev, w, ev, ex]) => `
+                        <div class="rounded-xl border border-[#DCE7FF] bg-white p-4 shadow-sm">
+                          <div class="flex flex-wrap items-center justify-between gap-2">
+                            <span class="text-sm font-bold text-[#142B52]">${t}</span>
+                            <span class="rounded-full bg-[#F5F8FF] px-2.5 py-0.5 text-xs font-semibold text-[#142B52]">${sev} Severity (+${w})</span>
+                          </div>
+                          <p class="mt-1.5 text-xs leading-relaxed text-[#52627C]">${ex}</p>
+                          <p class="mt-1.5 text-xs text-[#52627C]"><strong class="text-[#142B52]">Matched signal:</strong> <code class="rounded bg-[#F5F8FF] px-1.5 py-0.5 text-[#285FEA]">${escapeHtml(ev)}</code></p>
+                        </div>`
+                      )
+                      .join('')
+                  : '<p class="rounded-xl border border-[#DCE7FF] bg-white p-4 text-sm text-[#52627C]">No common scam keywords or domain mismatches were matched. Continue with standard independent verification.</p>'
+              }
+            </div>
+          </div>
+
+          <div>
+            <div class="flex items-center justify-between">
+              <h4 class="text-sm font-bold text-[#142B52]">Recommended Verification Actions</h4>
+              <button type="button" id="copyRecsBtn" class="text-xs font-semibold text-[#285FEA] hover:underline">Copy checklist</button>
+            </div>
+            <ul class="mt-2.5 space-y-2 text-sm text-[#52627C]">
+              ${recs.map((r) => `<li class="flex items-start gap-2"><span class="font-bold text-[#285FEA]">&#10003;</span><span>${escapeHtml(r)}</span></li>`).join('')}
+            </ul>
+          </div>
+
+          <div class="rounded-xl border border-[#F59E0B]/30 bg-[#F59E0B]/10 p-3.5 text-xs text-[#142B52]">
+            <strong>Assessment Limitations:</strong> Informational risk assessment only. OfferCheck does not guarantee employer authenticity—a Low Risk score does not mean a company has been independently verified. Assessed at ${new Date().toLocaleString('en-IN')}.
+          </div>
+
+          <div class="rounded-xl border border-[#DCE7FF] bg-white p-5">
+            <p class="text-sm font-bold text-[#142B52]">Want to receive your assessment and safety recommendations by email?</p>
+            <form id="assessmentEmailForm" class="mt-3 space-y-3">
+              <div class="flex flex-col gap-3 sm:flex-row">
+                <input id="assessEmailInput" type="email" required placeholder="you@college.edu" class="flex-1 rounded-xl border border-[#DCE7FF] px-3.5 py-2 text-sm focus:border-[#285FEA] focus:outline-none" />
+                <button type="submit" class="rounded-xl bg-[#142B52] px-5 py-2 text-sm font-semibold text-white hover:bg-[#1E3D73]">Email Assessment</button>
+              </div>
+              <label class="flex items-start gap-2 text-xs text-[#52627C]">
+                <input id="assessServiceConsent" type="checkbox" required class="mt-0.5 rounded" />
+                <span>Send me this assessment and safety checklist by email. *</span>
+              </label>
+              <label class="flex items-start gap-2 text-xs text-[#52627C]">
+                <input id="assessMarketingConsent" type="checkbox" class="mt-0.5 rounded" />
+                <span>Optional: Send me occasional student recruitment-safety alerts and OfferCheck updates.</span>
+              </label>
+              <p id="assessEmailFeedback" class="hidden rounded-lg bg-[#16A34A]/10 px-3.5 py-2 text-xs font-medium text-[#16A34A]"></p>
+            </form>
+          </div>
+        `;
+        box.classList.remove('hidden');
+
+        document.getElementById('copyRecsBtn').addEventListener('click', async () => {
+          try {
+            await navigator.clipboard.writeText('• ' + recs.join('\n• '));
+            document.getElementById('copyRecsBtn').textContent = 'Copied!';
+            setTimeout(() => {
+              const btn = document.getElementById('copyRecsBtn');
+              if (btn) btn.textContent = 'Copy checklist';
+            }, 2000);
+          } catch {}
+        });
+
+        document.getElementById('assessmentEmailForm').addEventListener('submit', (ev) => {
+          ev.preventDefault();
+          const fb = document.getElementById('assessEmailFeedback');
+          fb.textContent = 'Request recorded (static preview). Live email delivery connects once the Spring Boot + Resend backend is linked.';
+          fb.classList.remove('hidden');
+        });
+      });
+
+      // Community Reporting Demo Handler
+      document.getElementById('reportForm').addEventListener('submit', (e) => {
+        e.preventDefault();
+        if (document.getElementById('repTrap').value) return;
+        const fb = document.getElementById('reportFeedback');
+        fb.textContent = 'Thank you. Your report has been queued for moderator review before any public listing.';
+        fb.classList.remove('hidden');
+        e.target.reset();
+      });
+
+      // Waitlist Demo Handler
+      const waitlistEmails = new Set();
+      document.getElementById('waitlistForm').addEventListener('submit', (e) => {
+        e.preventDefault();
+        if (document.getElementById('wlTrap').value) return;
+        const em = document.getElementById('wlEmail').value.trim().toLowerCase();
+        const fb = document.getElementById('waitlistFeedback');
+        if (waitlistEmails.has(em)) {
+          fb.textContent = 'You are already registered on the OfferCheck waitlist with this email.';
+        } else {
+          waitlistEmails.add(em);
+          fb.textContent = 'Welcome to OfferCheck! You are on the early-access community list.';
+          e.target.reset();
+        }
+        fb.classList.remove('hidden');
+      });
+
+      // Legal Modals
+      const LEGAL_DOCS = {
+        privacy: ['Privacy Policy Summary', 'OfferCheck collects only the minimum data needed to assess offers, send requested emails, manage waitlist signups, and moderate community reports. We never request Aadhaar numbers, bank passwords, OTPs, or UPI PINs, and we separate marketing consent from requested emails. Contact hello@offercheck.in for correction or deletion.'],
+        terms: ['Terms & Conditions', 'By using OfferCheck, you agree not to submit false or malicious accusations, sensitive financial credentials, or automated spam. Community submissions undergo moderation prior to any publication and remain subject to correction disputes.'],
+        disclaimer: ['Platform Disclaimer', 'OfferCheck provides informational risk assessments based on user-supplied text and transparent rule checks. It does not guarantee that any company or recruiter is authentic or fraudulent. Always perform independent verification before accepting an offer.']
+      };
+      const legalModal = document.getElementById('legalModal');
+      document.querySelectorAll('[data-legal]').forEach((btn) =>
+        btn.addEventListener('click', () => {
+          const [title, body] = LEGAL_DOCS[btn.dataset.legal];
+          document.getElementById('legalTitle').textContent = title;
+          document.getElementById('legalBody').textContent = body;
+          legalModal.classList.remove('hidden');
+          legalModal.classList.add('flex');
+        })
+      );
+      document.getElementById('closeLegalBtn').addEventListener('click', () => {
+        legalModal.classList.add('hidden');
+        legalModal.classList.remove('flex');
+      });
+      legalModal.addEventListener('click', (e) => {
+        if (e.target === legalModal) {
+          legalModal.classList.add('hidden');
+          legalModal.classList.remove('flex');
+        }
+      });
+    </script>
+  </body>
+</html>
